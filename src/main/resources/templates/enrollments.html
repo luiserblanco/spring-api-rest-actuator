@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Enrollments</title>
+</head>
+<body>
+
+  <table>
+        <tr>
+            <td>Student</td>
+            <td>Grade</td>
+            
+        </tr>
+        <tr th:each="courseEnrollment: ${courseEnrollments}">
+            <td th:text="${courseEnrollment.lastName} + ', ' + ${courseEnrollment.firstName} ">Student</td>
+            <td th:text="${courseEnrollment.grade}">Grade</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
